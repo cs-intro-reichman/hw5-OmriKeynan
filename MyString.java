@@ -5,13 +5,10 @@ public class MyString {
     public static void main(String args[]) {
         String hello = "hello";
         String spa = "silent";
-        String space = "space";
-        String empty = null;
         System.out.println(countChar(hello, 'h'));
         System.out.println(countChar(hello, 'l'));
         System.out.println(countChar(hello, 'z'));
-        System.out.println(spacedString(empty));
-        System.out.println(subsetOf(space, "pass"));
+        System.out.println(subsetOf("runi", ""));
         System.out.println(spacedString(spa));
     }
 
@@ -46,6 +43,9 @@ public class MyString {
      */
     public static boolean subsetOf(String str1, String str2) {
         boolean subSet = true;
+        if (str2 == "") {
+            return false; 
+        }
         for (int i = 0; i < str1.length(); i++) {
             char charStr1 = str1.charAt(i);
             //System.out.println("Char to check " +charStr1);
@@ -100,11 +100,12 @@ public class MyString {
      * @return a randomly generated string, consisting of 'n' lowercase letters
      */
     public static String randomStringOfLetters(int n) {
-        char[] result = new char[n];
+        String result = "";
         for (int i = 0; i < n; i++) {
-            result[i] = (char) ('a' + (int) (Math.random() * 26));
+            char rand = (char) ('a' + (int) (Math.random() * 26));
+            result += rand;
         }
-        return new String(result);
+        return result;
     }
 
     /**
