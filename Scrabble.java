@@ -119,7 +119,7 @@ public class Scrabble {
 				if (MyString.subsetOf(input, hand) && isWordInDictionary(input)){
 					int currentWordScore = wordScore(input);
 					score += currentWordScore;
-					System.out.println(input + " earned " + currentWordScore + " points. Scores: " + score + " points\n");
+					System.out.println(input + " earned " + currentWordScore + " points. Score: " + score + " points\n");
 					hand = MyString.remove(hand, input);
 				}
 				else {
@@ -157,9 +157,6 @@ public class Scrabble {
 			}
 			else if (input.equals("e")) {
 				break;
-			}
-			else {
-				System.out.println("Invalid input. Please enter 'n' to deal a new hand, or 'e' to end the game.");
 			}
 
 		}
