@@ -158,6 +158,9 @@ public class Scrabble {
 			else if (input.equals("e")) {
 				break;
 			}
+			else {
+				System.out.println("Invalid input. Please enter 'n' to deal a new hand, or 'e' to end the game.");
+			}
 
 		}
 	}
