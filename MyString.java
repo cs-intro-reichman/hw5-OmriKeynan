@@ -78,11 +78,10 @@ public class MyString {
      * @return a string consisting of the characters of str, separated by spaces.
      */
     public static String spacedString(String str) {
-        if (str == "") {
+        if (str.equals("")) {
             return str;
         }
-        String newStr = " ";
-        newStr += str.charAt(0);
+        String newStr = "" + str.charAt(0);
         for (int i = 1; i < str.length(); i++){
             newStr += " " + str.charAt(i);
         }
